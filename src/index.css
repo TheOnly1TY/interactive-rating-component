@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*=========== COLORS ===============*/
+  /* color mode: hsl(hue, stauration, lightness) */
+  --dark-blue: #262e38;
+  --very-dark-blue: #131518;
+  --light-grey: #969fad;
+  --medium-grey: #7c8798;
+  --orange: #fc7614;
+  --white: #fff;
+
+  /* FONT SIZE */
+  /* 16px === 1rem && 8px === 0.5rem */
+  --font-size-base: 0.9375rem;
+  --font-size-small: 1rem;
+  --font-size-large: 1.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+}
+
+.container {
+  max-width: 412px;
+  background: linear-gradient(0deg, #232a34 0%, #181e27 100%);
+  padding: 2.25rem;
+  border-radius: 30px;
+}
+
+.logo {
+  display: grid;
+  place-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+}
+
+.container h1 {
+  font-size: var(--font-size-large);
+  margin: 23px 0;
+  color: var(--white);
+}
+.container p {
+  font-size: var(--font-size-base);
+  line-height: 1.5rem;
+  color: var(--light-grey);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating span {
+  display: grid;
+  place-content: center;
+  width: 51px;
+  height: 51px;
+  background-color: var(--dark-blue);
+  color: var(--medium-grey);
+  border-radius: 50%;
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+  margin: 23px 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.rating span:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating span.checked {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+button {
+  all: unset;
+  width: 100%;
+  height: 45px;
+  background-color: var(--orange);
+  color: var(--white);
+  text-align: center;
+  border-radius: 22.5px;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* RATING RESULT STYLING */
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.resultTextContainer {
+  display: grid;
+  place-content: center;
+  width: 193px;
+  height: 32px;
+  border-radius: 22px;
+  background-color: var(--dark-blue);
+  margin-top: 1.5rem;
+}
+
+.resultTextContainer span {
+  color: var(--orange);
+}
+
+@media (max-width: 470px) {
+  .container {
+    margin: 0 1.5rem;
+    padding: 1.4375rem;
+    border-radius: 15px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .container h1 {
+    font-size: calc(var(--font-size-large) - 0.25rem);
+  }
+
+  .container p {
+    font-size: calc(var(--font-size-base) - 0.0625rem);
+    line-height: 1.375rem;
+  }
+  button {
+    letter-spacing: 1.87px;
+  }
+}
