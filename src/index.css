@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"); */
 
-:root {
-  /*=========== COLORS ===============*/
-  /* color mode: hsl(hue, stauration, lightness) */
-  --dark-blue: #262e38;
-  --very-dark-blue: #131518;
-  --light-grey: #969fad;
-  --medium-grey: #7c8798;
-  --orange: #fc7614;
-  --white: #fff;
+@theme {
+  --color-dark-blue: #262e38;
+  --color-very-dark-blue: #131518;
+  --color-light-grey: #969fad;
+  --color-medium-grey: #7c8798;
+  --color-orange: #fc7614;
+}
 
-  /* FONT SIZE */
-  /* 16px === 1rem && 8px === 0.5rem */
-  --font-size-base: 0.9375rem;
-  --font-size-small: 1rem;
-  --font-size-large: 1.75rem;
+@layer components {
+  .container {
+    max-width: 412px;
+    background: linear-gradient(0deg, #232a34 0%, #181e27 100%);
+    padding: 2.25rem;
+    border-radius: 30px;
+  }
 }
 
 * {
@@ -31,10 +31,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--very-dark-blue);
+  background-color: #131518;
 }
 
-.container {
+/* .container {
   max-width: 412px;
   background: linear-gradient(0deg, #232a34 0%, #181e27 100%);
   padding: 2.25rem;
@@ -89,10 +89,7 @@ body {
   color: var(--white);
 }
 
-.rating span.checked {
-  background-color: var(--medium-grey);
-  color: var(--white);
-}
+
 
 button {
   all: unset;
@@ -114,7 +111,6 @@ button:hover {
   color: var(--orange);
 }
 
-/* RATING RESULT STYLING */
 .resultContainer {
   display: flex;
   flex-direction: column;
@@ -160,4 +156,4 @@ button:hover {
   button {
     letter-spacing: 1.87px;
   }
-}
+} */
