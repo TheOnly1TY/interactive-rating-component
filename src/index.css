@@ -1,6 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
-
-/* @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"); */
 
 @theme {
   --color-dark-blue: #262e38;
@@ -10,20 +9,9 @@
   --color-orange: #fc7614;
 }
 
-@layer components {
-  .container {
-    max-width: 412px;
-    background: linear-gradient(0deg, #232a34 0%, #181e27 100%);
-    padding: 2.25rem;
-    border-radius: 30px;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
+.container {
+  max-width: 412px;
+  background: linear-gradient(0deg, #232a34 0%, #181e27 100%);
 }
 
 body {
@@ -31,7 +19,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0 1rem;
   background-color: #131518;
+  font-family: "Overpass", sans-serif;
 }
 
 /* .container {
