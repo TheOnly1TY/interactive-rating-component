@@ -1,1 +1,1 @@
-# React + Vite
+# interactive rating component 
